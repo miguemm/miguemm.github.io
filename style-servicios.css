@@ -1,0 +1,14 @@
+table{
+    margin-bottom: 80px;
+}
+
+.table-element {
+    width: 200px;
+    text-align: center;
+}
+.table-element b {
+    font-weight: bold;
+}
+.table-element a img {
+    width: 100px;
+}
