@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.header{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 2;
+}
+.header ul{
+    text-align: center;
+}
+.header ul li {
+    list-style: none;
+    display: inline-block;
+}
+.header ul #homeBtn{
+    height: 100%;
+    position: absolute;
+    left: 30px;
+}
+.header ul #homeBtn img{
+    height: 100%;
+}
+.header ul li a{
+    display: block;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 2px;
+    font-weight: 600;
+    padding: 25px;
+    transition: all ease 0.5s;
+
+    z-index: 2;
+}
+.header ul li a:hover{
+    background-color: #211b4385;
+}
+
+
+.wraper {
+
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+
+    background-image: url(../files/backGround.jpg);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+
+}
+
+/* Title */
+h1{
+    display: block;
+    font-family: monospace;
+    white-space: nowrap;
+    border-right: 4px solid;
+    width: 23ch;
+
+    animation: typing 2s steps(12), blink .6s infinite step-end alternate;
+    overflow: hidden;
+
+    color: white;
+    z-index: 2;
+}
+
+/* Frames for Typing and blinks animation */
+@keyframes typing {
+    from { width: 0;}
+}
+@keyframes blink {
+    50% {border-color: transparent;}
+}
+
+/* Backgound shade */
+.overlay{
+    background: #00000080;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
