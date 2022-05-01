@@ -41,6 +41,7 @@
 }
 .header ul li a:hover{
     background-color: #211b4385;
+    color: #ed1c6f;;
 }
 
 
@@ -60,29 +61,6 @@
 
 }
 
-/* Title */
-h1{
-    display: block;
-    font-family: monospace;
-    white-space: nowrap;
-    border-right: 4px solid;
-    width: 23ch;
-
-    animation: typing 2s steps(12), blink .6s infinite step-end alternate;
-    overflow: hidden;
-
-    color: white;
-    z-index: 2;
-}
-
-/* Frames for Typing and blinks animation */
-@keyframes typing {
-    from { width: 0;}
-}
-@keyframes blink {
-    50% {border-color: transparent;}
-}
-
 /* Backgound shade */
 .overlay{
     background: #00000080;
@@ -93,3 +71,30 @@ h1{
     left: 0;
     z-index: 1;
 }
+
+#homeBtn {
+    text-decoration: none;
+    margin-left: 100px;
+}
+
+.logo2{
+    background: none;
+    border: solid;
+    border-radius: 20px;
+    padding: 2px;
+    color: #ea1d6f;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+}
+.logo3{
+    color: #b9134f;
+}
+.logo1{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    color: #ea1d6f;
+    font-size: 26px;
+}
+

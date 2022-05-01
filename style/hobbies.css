@@ -1,98 +1,70 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
-
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    background: #333;
-    color: #fff;
-    font-family: 'Roboto', sans-serif;
-}
-
-h2 {
-    font-size: 45px;
-    font-weight: 300;
-    margin: 10px;
-}
-
-h2 span {
-    font-size: 30px;
+*{
+  box-sizing: border-box;
 }
 
 p {
-    font-size: 15px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 2em;
+  font-weight: bold;
+  border: solid;
+  border-width: .5px;
+  border-radius: 10px;
+  border-color: #ea1d6f;
 }
 
-.container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 10px;
-    z-index: 2;
+.slider{
+  z-index: 2;
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  animation: rotate 20s linear infinite;
 }
 
-.container>div {
-    cursor: pointer;
-    height: 210px;
-    background-size: cover;
+@keyframes rotate{
+  0%{
+    transform: perspective(1000px) rotateY(0deg);
+  }
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-
-    transition: all 0.3s ease-in;
-    
+  100%{
+    transform: perspective(1000px) rotateY(360deg);
+  }
 }
 
-.container>div:hover {
-    opacity: 0.7;
-    transform: scale(0.98);
+.slider span{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform-origin: center;
+  transform-style: preserve-3d;
+  transform: rotateY(calc(var(--i)*45deg)) translateZ(350px);
 }
 
-.container>div:nth-of-type(1) {
-    grid-column: 1 / 3;
+.slider span img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+  transition: .5s;
 }
 
-.container>div:nth-of-type(6) {
-    grid-column: 3 / 5;
+.slider span:hover img{
+  transform: translateY(-50px) scale(1.2);
+  opacity: 0;
 }
 
-.container>div:nth-of-type(9) {
-    grid-column: 3 / 5;
-}
 
-.container>div:nth-of-type(10) {
-    grid-column: 1 / 3;
-}
-
-.bg1 {
-    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN1H6ofWOFAXuJO1gLCwJoCwuKn_vBn_JK6CHHqFzXCkaOEQ0enx9j1c6ZkIj03bkMijo&usqp=CAU');
-}
-
-.bg2 {
-    background: url('https://library.kissclipart.com/20180903/zgw/kissclipart-flor-de-lis-scout-clipart-world-scout-emblem-fleur-3e973af87f98a55f.jpg');
-    color: #333;
-}
-.bg3 {
-    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN1H6ofWOFAXuJO1gLCwJoCwuKn_vBn_JK6CHHqFzXCkaOEQ0enx9j1c6ZkIj03bkMijo&usqp=CAU');
-}
-
-.bg4 {
-    background: url('https://lamenteesmaravillosa.com/wp-content/uploads/2017/10/familia-de-papel-sostenida-por-manos-260x260.jpg');
-    color: #333;
-}
-.bg5 {
-    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN1H6ofWOFAXuJO1gLCwJoCwuKn_vBn_JK6CHHqFzXCkaOEQ0enx9j1c6ZkIj03bkMijo&usqp=CAU');
-}
-
-.bg6 {
-    background: url('https://gruposcoutchan292.files.wordpress.com/2020/12/world-scout-movement.jpg');
-    width: 100%;
-    height: auto;
-}
 
